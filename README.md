@@ -8,7 +8,7 @@ The images were generated with the following setup:
 
 Then, from the root of this directory:
 ```bash
-export DISPLAY=:99
+export DISPLAY=:99 && export LIBGL_ALWAYS_SOFTWARE=1
 v gret -r $HOME/.vmodules/shy -t vgret.shy_examples.toml -v /tmp/shy-visual-tests
 v gret -r $HOME/.vmodules/shy -t vgret.shy_visual_tests.toml -v /tmp/shy-visual-tests
 ```
