@@ -21,5 +21,5 @@ v gret -r $HOME/.vmodules/shy -t vgret.shy_examples.toml -v /tmp/shy-visual-test
 v gret -r $HOME/.vmodules/shy -t vgret.shy_visual_tests.toml -v /tmp/shy-visual-tests ./
 ```
 
-<img src='https://github.com/Larpon/shy-visual-tests/raw/master/examples.jpg' width=700>
-<img src='https://github.com/Larpon/shy-visual-tests/raw/master/tests.jpg' width=700>
+<img src='examples.jpg' width=700>
+<img src='tests.jpg' width=700>
