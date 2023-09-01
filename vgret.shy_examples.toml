@@ -20,6 +20,9 @@
 
 [[apps]]
   path = 'examples/anchors/anchors.v'
+  [apps.capture]
+    method = 'gg_record'
+    flags = ['-cg','-d debug_font','-d shy_record','-d shy_no_vsync']
 
 [[apps]]
   path = 'examples/anchors/triangle_anchors.v'
