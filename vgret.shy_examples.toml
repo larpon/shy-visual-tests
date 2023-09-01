@@ -1,0 +1,88 @@
+# Defaults
+#
+# References are taken using:
+# `Xvfb :99 -dpi 96 -screen 0 1280x1024x24`
+#
+[compare]
+  method = 'idiff'
+  flags = ['-p','-fail 0.001','-failpercent 0.2']
+
+[capture]
+  method = 'gg_record'
+  flags = ['-d shy_record','-d shy_no_vsync']
+
+[capture.env]
+  SHY_EXIT_ON_FRAME = '8'
+  SHY_RECORD_DIR = '$OUT_PATH'
+  SHY_RECORD_FRAMES = '5'
+
+# List of apps to run and capture
+
+[[apps]]
+  path = 'examples/anchors/anchors.v'
+
+[[apps]]
+  path = 'examples/anchors/triangle_anchors.v'
+
+[[apps]]
+  path = 'examples/animation/animators.v'
+
+[[apps]]
+  path = 'examples/hello_world/hello_world.v'
+
+[[apps]]
+  path = 'examples/image/image.v'
+
+[[apps]]
+  path = 'examples/image/image_resize.v'
+
+[[apps]]
+  path = 'examples/image_regions/image_regions.v'
+
+[[apps]]
+  path = 'examples/mouse/mouse.v'
+
+[[apps]]
+  path = 'examples/multi_window/multi_window.v'
+
+[[apps]]
+  path = 'examples/particles/simple.v'
+  [apps.capture.env]
+    # This is adjusted for two reasons:
+    # 1. Test shy's deterministic behaviour (disabled with -d shy_no_determinism)
+    # 2. Get a more interesting test output
+    SHY_EXIT_ON_FRAME = '1005'
+    SHY_RECORD_FRAMES = '1000'
+
+
+[[apps]]
+  path = 'examples/render_step/render_step.v'
+
+[[apps]]
+  path = 'examples/render_step/ui_and_manual_mode.v'
+
+[[apps]]
+  path = 'examples/shapes/circle/circle.v'
+
+[[apps]]
+  path = 'examples/shapes/lines/lines.v'
+
+[[apps]]
+  path = 'examples/shapes/rectangle/rectangle.v'
+
+[[apps]]
+  path = 'examples/shapes/triangle/triangle.v'
+
+[[apps]]
+  path = 'examples/shapes/uniform_polygon/uniform_polygon.v'
+
+[[apps]]
+  path = 'examples/sound/embedded_sound.v'
+
+[[apps]]
+  path = 'examples/sound/sound.v'
+
+# Reasons for ex- or inclusion:
+#
+# 'examples/ui/ui.v' : subject to change
+# 'examples/timers/timers.v' : shows real time clock
