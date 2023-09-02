@@ -5,13 +5,16 @@ This repository contains reference images for visual tests that can be performed
 The images were generated with the following setup:
 
 To match the CI as much as possible the images are currently generated in an
-Ubuntu 22.04 virtual machine, we hope to fix this over time.
+Ubuntu 22.04 virtual box machine, locally, to match the output of the software rasterizer driver
+used in GitHubs CI.
 
-`Xvfb :99 -dpi 96 -screen 0 1280x1024x24 &`
+```bash
+export DISPLAY=:99 && export LIBGL_ALWAYS_SOFTWARE=true
+Xvfb :99 -dpi 96 -screen 0 1280x1024x24 &
+```
 
 Then, from the root of this directory:
 ```bash
-export DISPLAY=:99 && export LIBGL_ALWAYS_SOFTWARE=true
 v gret -r $HOME/.vmodules/shy -t vgret.shy_examples.toml -v /tmp/shy-visual-tests
 v gret -r $HOME/.vmodules/shy -t vgret.shy_visual_tests.toml -v /tmp/shy-visual-tests
 ```
@@ -19,7 +22,6 @@ v gret -r $HOME/.vmodules/shy -t vgret.shy_visual_tests.toml -v /tmp/shy-visual-
 Testing against a freshly captured set use:
 
 ```bash
-export DISPLAY=:99 && export LIBGL_ALWAYS_SOFTWARE=true
 v gret -r $HOME/.vmodules/shy -t vgret.shy_examples.toml -v /tmp/shy-visual-tests ./
 v gret -r $HOME/.vmodules/shy -t vgret.shy_visual_tests.toml -v /tmp/shy-visual-tests ./
 ```
