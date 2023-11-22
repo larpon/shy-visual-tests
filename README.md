@@ -10,7 +10,7 @@ used in GitHubs CI.
 
 ```bash
 export DISPLAY=:99 && export LIBGL_ALWAYS_SOFTWARE=true
-Xvfb :99 -dpi 96 -screen 0 1280x1024x24 &
+Xvfb :99 -dpi 96 -screen 0 960x614x24 &
 ```
 
 Then, from the root of this directory:

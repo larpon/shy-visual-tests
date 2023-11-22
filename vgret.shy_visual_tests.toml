@@ -1,7 +1,7 @@
 # Defaults
 #
 # References are taken using:
-# `Xvfb :99 -dpi 96 -screen 0 1280x1024x24`
+# `Xvfb :99 -dpi 96 -screen 0 960x614x24`
 #
 [compare]
   method = 'idiff'
