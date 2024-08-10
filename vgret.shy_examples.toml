@@ -15,6 +15,7 @@
   SHY_EXIT_ON_FRAME = '8'
   SHY_RECORD_DIR = '$OUT_PATH'
   SHY_RECORD_FRAMES = '5'
+  SHY_FULLSCREEN = 1
 
 # List of apps to run and capture
 
