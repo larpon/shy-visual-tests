@@ -9,7 +9,7 @@
 
 [capture]
   method = 'gg_record'
-  flags = ['-d shy_record','-d shy_no_vsync']
+  flags = ['-d shy_record', '-d shy_no_vsync', '-d sdl_memory_no_gc']
 
 [capture.env]
   SHY_EXIT_ON_FRAME = '125'
