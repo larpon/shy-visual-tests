@@ -1,6 +1,6 @@
 # Reference images for Shy visual tests
 
-This repository contains reference images for visual tests that can be performed in [Shy](https://github.com/Larpon/shy).
+This repository contains reference images for visual tests that can be performed in [Shy](https://github.com/larpon/shy).
 
 The images were generated with the following setup:
 
